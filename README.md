@@ -1,6 +1,7 @@
 # Movie App with React.js
 
 This Movie App is my first react.js project.
+Netlify Link: https://nureddin-movieapp.netlify.app/
 
 ## Homepage: 
 In homepage, there is one big slider for trending movies and 3 small carousels for other categories.
