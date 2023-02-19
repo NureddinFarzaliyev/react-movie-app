@@ -71,7 +71,7 @@ const Gradient = styled.div`
     }
     `
 
-
+const key = "REACT_APP_API_KEY"
 
 const Search = () => {
     const query = useParams().query;
@@ -79,7 +79,7 @@ const Search = () => {
 
     useEffect(() => {
         const getResults = async () => {
-            const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=23700a5b8cec4946243797a562c1bf8f&language=en-US&query=${query}&page=1`)
+            const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key={key}&language=en-US&query=${query}&page=1`)
             const data = await response.json();
             setMovies(data.results);
         }
