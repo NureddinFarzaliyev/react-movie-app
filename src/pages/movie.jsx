@@ -65,13 +65,15 @@ const ImdbLink = styled.div`
     }
     `
 
+const key = "REACT_APP_API_KEY"
+
 const Movie = () => {
     const [movie, setMovies] = useState([]);
     let id = useParams().id;
 
     useEffect(() => {
         const getData = async () => {
-            const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=23700a5b8cec4946243797a562c1bf8f&language=en-US`)
+            const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key={key}&language=en-US`)
             const data = await response.json();
             setMovies(data);
         }
