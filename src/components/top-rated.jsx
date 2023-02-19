@@ -4,13 +4,15 @@ import '@splidejs/splide/css';
 import { Link } from 'react-router-dom';
 import { Header, Parent, Wrapper, Card, Image, Gradient, Title } from './styled'
 
+const key = "REACT_APP_API_KEY"
+
 const Top = () => {
     const [movies, setMovies] = useState([]); // state hook for getting movies
 
     useEffect(() => {
         const getData = async () => {
             // Fetching data
-            const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=23700a5b8cec4946243797a562c1bf8f&language=en-US`)
+            const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key={key}&language=en-US`)
             const data = await response.json();
             // assign data to movies hook
             setMovies(data.results);
