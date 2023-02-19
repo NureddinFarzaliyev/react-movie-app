@@ -4,6 +4,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
 import { Link } from 'react-router-dom';
 
+const key = "REACT_APP_API_KEY"
 
 const Popular = () => {
     const [movies, setMovies] = useState([]); // state hook for getting movies
@@ -11,7 +12,7 @@ const Popular = () => {
     useEffect(() => {
         const getPopular = async () => {
             // Fetcing data
-            const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=23700a5b8cec4946243797a562c1bf8f&language=en-US`)
+            const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key={key}&language=en-US`)
             const data = await response.json();
             // assign data to movies hook
             setMovies(data.results);
