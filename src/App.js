@@ -5,8 +5,6 @@ import Movie from './pages/movie'
 import Nav from './components/nav';
 import Search from './pages/search';
 
-const key = "23700a5b8cec4946243797a562c1bf8f";
-
 function App() {
   return (
     <div>
