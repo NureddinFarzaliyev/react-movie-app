@@ -1,0 +1,23 @@
+* {
+    padding: 0px;
+}
+
+
+/* popular.jsx */
+.wrapper {
+    max-width: 90vw;
+    margin-left: -5vw;
+}
+
+.popCard {
+    width: 90vw;
+}
+
+
+.popHeader {
+    width: 90vw;
+}
+
+.popImg {
+    width: 90vw;
+}
