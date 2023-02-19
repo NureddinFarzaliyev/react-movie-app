@@ -1,6 +1,6 @@
 # Movie App with React.js
 
-This Movie App is my first react.js project.
+This Movie App is my first react.js project. <br>
 Netlify Link: https://nureddin-movieapp.netlify.app/
 
 ## Homepage: 
